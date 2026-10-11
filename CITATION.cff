@@ -1,0 +1,11 @@
+cff-version: "1.2.0"
+message: "If you use this research code, please cite this software and the archived version used in your analysis."
+type: software
+title: "Mongolian Plateau groundwater greening and potential GDE analysis code"
+version: "1.0.0"
+repository-code: "https://github.com/boaohan/mongolian-plateau-groundwater-greening"
+authors:
+  - family-names: "Bo"
+    given-names: "Aohan"
+    affiliation: "School of Soil and Water Conservation, Beijing Forestry University"
+    orcid: "https://orcid.org/0009-0002-0355-0262"
