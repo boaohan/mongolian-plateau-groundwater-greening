@@ -1,0 +1,11 @@
+# Direct research dependencies identified from the supplied source.
+# Historical versions were not supplied. These are NOT an original environment lock.
+# After a successful run in the actual research environment, archive its pip freeze.
+numpy
+pandas
+scipy
+scikit-learn
+pyproj
+matplotlib
+xgboost
+shap

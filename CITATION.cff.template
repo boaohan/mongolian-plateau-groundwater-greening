@@ -1,0 +1,17 @@
+# Template only. Complete all REPLACE fields, then save as CITATION.cff.
+# Alternatively run: python tools/prepare_release.py --interactive
+# Do not put this template in a formal release as an actual CITATION.cff.
+cff-version: "1.2.0"
+message: "If you use this research code, please cite the archived version used in your analysis."
+type: software
+title: "Mongolian Plateau groundwater greening and potential GDE analysis code"
+version: "1.0.0"
+date-released: "REPLACE_WITH_ACTUAL_RELEASE_DATE_YYYY-MM-DD"
+repository-code: "REPLACE_WITH_ACTUAL_GITHUB_REPOSITORY_URL"
+license: "REPLACE_WITH_CONFIRMED_SPDX_LICENSE_ID"
+authors:
+  - family-names: "REPLACE_WITH_ACTUAL_FAMILY_NAME"
+    given-names: "REPLACE_WITH_ACTUAL_GIVEN_NAME"
+# Add all confirmed code authors in their agreed order.
+# Optional: affiliation and an actual ORCID URL.
+# After archiving, add the actual version DOI; omit the field beforehand.

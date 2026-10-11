@@ -1,0 +1,43 @@
+{
+  "python_files_parsed": 12,
+  "javascript_files_checked": 11,
+  "javascript_note": "Syntax only; Earth Engine execution requires assets and authorization.",
+  "research_scripts_in_manifest": 18,
+  "research_scripts_modified_since_packaging": [],
+  "failures": [],
+  "scientific_pipeline_executed": false,
+  "doi_registered": false,
+  "date": "2026-10-10",
+  "helper_checks": [
+    {
+      "check": "local stage listing",
+      "status": "passed"
+    },
+    {
+      "check": "missing research inputs stop execution without creating results",
+      "status": "passed"
+    },
+    {
+      "check": "all 11 locally configured Earth Engine files have resolved prefixes and valid JavaScript syntax",
+      "status": "passed",
+      "note": "Test-only synthetic asset identifiers; no Earth Engine connection."
+    },
+    {
+      "check": "incomplete author/release metadata is rejected",
+      "status": "passed"
+    },
+    {
+      "check": "citation utility writes parseable CFF with supplied authors and no invented DOI",
+      "status": "passed",
+      "note": "Synthetic test metadata retained outside the delivered repository."
+    },
+    {
+      "check": "non-DOI placeholder is rejected",
+      "status": "passed"
+    }
+  ],
+  "research_data_used": false,
+  "earth_engine_tasks_submitted": false,
+  "historical_environment_verified": false,
+  "scope": "Static parsing and packaging helper checks only; not end-to-end scientific reproduction."
+}

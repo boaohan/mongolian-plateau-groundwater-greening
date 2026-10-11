@@ -1,0 +1,245 @@
+{
+  "source_document": "新蒙古高原研究思路（具体代码）(4).docx",
+  "source_document_sha256": "29542dbe487c08f445a7b52ce344beed082e293aef8c31662f728d34a9772058",
+  "packaging_date": "2026-10-10",
+  "research_execution_date": "not supplied",
+  "extraction": "OOXML body paragraphs in document order; w:t, tabs and line breaks preserved; prose headings excluded from script blocks. Line references refer to the extracted text, not Word page numbers.",
+  "scientific_changes": "No thresholds, random seeds, model hyperparameters, spatial masks or split-selection branches were intentionally changed. Paths and default GUI input behavior were adapted. A duplicated orphan callback tail in step 09 was removed to fix a SyntaxError; see the script-specific change record.",
+  "scripts": [
+    {
+      "file": "scripts/gee/04a_build_period_predictors_pooled_v2.js",
+      "description": "Build harmonized period predictors",
+      "extracted_text_lines": [
+        6,
+        2700
+      ],
+      "original_extracted_sha256": "a636f76f1d8ec9fa4663d4ae8f9dac8c63779444bc787ced38274898dc7949d7",
+      "packaged_sha256": "ee2079b16072bbf41d60c5737cbf8fb80194ff2a004710c119a17596c8b1a339",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/04b_export_pooled_v2_assets_to_drive.js",
+      "description": "Optional predictor backup to Drive",
+      "extracted_text_lines": [
+        2702,
+        2922
+      ],
+      "original_extracted_sha256": "5ab853b213c96a030263271d820a4f64c3f912a9ac5f21ff1bbccacfcdb8aac0",
+      "packaged_sha256": "a47cdd04bd33491029e732667d4bbd0830b7f06ff5d3d23e66dc875cf767e095",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/06_07_build_stable_anchor_candidates_pooled_v2.js",
+      "description": "Construct proxy-label anchor candidates",
+      "extracted_text_lines": [
+        2925,
+        3934
+      ],
+      "original_extracted_sha256": "e006b4e3518275a4c7052cb294075f3af6e8afd9062f533b739dd521ce47993d",
+      "packaged_sha256": "075bf3576ba7bd02645e2da6b648e41ca1a1e8c1e30a0611a7b590a3f4c3a21d",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/python/08_spatial_thinning_and_blocks.py",
+      "description": "Thin anchors and assign spatial blocks",
+      "extracted_text_lines": [
+        3937,
+        4506
+      ],
+      "original_extracted_sha256": "8b1eef871b02e1baf28ef1700499ada0d34bbbcc11e9808ec1659ef9613a650b",
+      "packaged_sha256": "bdabab4b9f88d5175b24effc5092d76006e88c23d2731ce1c1bf6e183d631ec1",
+      "changes": [
+        "Replaced a fixed Windows WORK_DIR with repository-relative data/work or MP_WORK_DIR."
+      ]
+    },
+    {
+      "file": "scripts/gee/09_extract_pooled_training_records_v2_FIXED.js",
+      "description": "Extract predictors at fixed anchors",
+      "extracted_text_lines": [
+        4508,
+        5192
+      ],
+      "original_extracted_sha256": "e1bcd71c79eeb687907be44b04ae447ec2f191a7f6cc1d0a355f3a5c502ed15b",
+      "packaged_sha256": "487b32378536dcf07ac3f20f216b418efd368a75992b8423acc79bdabc7fefaf",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT.",
+        "Removed an orphan duplicated map-callback tail (return ee.Feature(point, feature.toDictionary()); });) and repeated filter/prints copied after an already complete callback. The intact lon/lat point constructor and copyProperties callback were retained. This repairs a JavaScript SyntaxError; Earth Engine execution was not performed."
+      ]
+    },
+    {
+      "file": "scripts/python/09b_repair_training_record_ids.py",
+      "description": "Recover sample identifiers and prepare READY records",
+      "extracted_text_lines": [
+        5194,
+        5475
+      ],
+      "original_extracted_sha256": "811121945ea826915a89e811fd862d272fb304202bea2595990e748a1ae123a0",
+      "packaged_sha256": "3b5d4e50089206b23278dec792ff04eb91a132fba66d20874cc11aa075fb74ad",
+      "changes": [
+        "Replaced a fixed Windows WORK_DIR with repository-relative data/work or MP_WORK_DIR."
+      ]
+    },
+    {
+      "file": "scripts/python/10_validate_pooled_RF_v2.py",
+      "description": "Spatial and blocked temporal random-forest validation",
+      "extracted_text_lines": [
+        5477,
+        6434
+      ],
+      "original_extracted_sha256": "6d639fe4cf08d1cbde41cb47a8f4336c835bb7f2529d8a91984c3fef65bec613",
+      "packaged_sha256": "c2c944e35de7288ffdcdafe6f3e060d34179a955e54a96e1c041cd83a402b693",
+      "changes": [
+        "Replaced a fixed Windows WORK_DIR with repository-relative data/work or MP_WORK_DIR."
+      ]
+    },
+    {
+      "file": "scripts/gee/12_13_FINAL_POOLED_RF_AND_PGDE_READY.js",
+      "description": "Fit pooled RF and predict all periods",
+      "extracted_text_lines": [
+        6437,
+        7405
+      ],
+      "original_extracted_sha256": "308fad8619461ab1e501dfe6f1fe8c4f5a749ee4695319bef0fb9b7d779214c3",
+      "packaged_sha256": "1a8255d1ab8536abe6a2430fc7e72ee925e4a5ba0335e3a25d5d867691fd3b86",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/14_FOLD10_ENSEMBLE_UNCERTAINTY_READY.js",
+      "description": "Ten delete-one-fold submodels and uncertainty",
+      "extracted_text_lines": [
+        7407,
+        8274
+      ],
+      "original_extracted_sha256": "09a82c1e23b17b24295f7dca5da3c75d99df8ee48f63bfa4ed8bce414421c08e",
+      "packaged_sha256": "b76b8dc78625a7e1c4e847f10e21c98894cee2c61c3c8e2446e8345acd40702e",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/15_APPLICABILITY_DOMAIN_READY.js",
+      "description": "Model applicability domains",
+      "extracted_text_lines": [
+        8276,
+        9163
+      ],
+      "original_extracted_sha256": "64bf5b80302b371520baf3f4084bd6c2b995b9ee10cad4c57385b2f3814bb572",
+      "packaged_sha256": "ca7961e794119629399575f16fdf759dd795fcfa221a396a3366c35f094f8389",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/16_RELIABILITY_AND_MISCLASSIFICATION_READY_FIXED_NOMAP.js",
+      "description": "Reliability and ecological-confusion flags",
+      "extracted_text_lines": [
+        9165,
+        10540
+      ],
+      "original_extracted_sha256": "39481f7e3be81f6d96a82cdb4789c544ea124aa3d2350ae1126158afafff11b7",
+      "packaged_sha256": "88ad65b8663c9ae44af595205ea568e9a52d7798b7fdce92bdee4d8262c719dd",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/17_CORE_TURNOVER_WITH_AD_READY_FIXED.js",
+      "description": "Core thresholds, turnover and domain sensitivity",
+      "extracted_text_lines": [
+        10542,
+        12505
+      ],
+      "original_extracted_sha256": "9dd3b7904054eda1cbb3298000a095ba3b3d04185e4cb8b04cee237388de0676",
+      "packaged_sha256": "fc6e74df5d40df587ee4eb45e444c7183437a3126b9458713acbd46e07978e03",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/18_AGGREGATE_CORE_TURNOVER_TO_GRID_READY.js",
+      "description": "Aggregate endpoint outputs to the existing trend grid",
+      "extracted_text_lines": [
+        12507,
+        13021
+      ],
+      "original_extracted_sha256": "14225bc0bbe062980483d187be1d691f07dcaa52ef6f22ad23a25a439994a005",
+      "packaged_sha256": "1b80e8523f406856d6aece40bb91e94b6be491cf73514497513e52ad5659238b",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/gee/19_CONSERVATIVE_POST_WEIGHT_SENSITIVITY.js",
+      "description": "Optional legacy PGDE post-weighting sensitivity",
+      "extracted_text_lines": [
+        13023,
+        13465
+      ],
+      "original_extracted_sha256": "637bd583f2c489a6870832f6a3ca6fc5eb9a4827c90b7a26b0661391e4b14191",
+      "packaged_sha256": "287018907312860f32090410de8799d304b5ea7337382759607d0012ff23d309",
+      "changes": [
+        "Replaced 2 occurrences of the personal Earth Engine project prefix with YOUR_GEE_PROJECT."
+      ]
+    },
+    {
+      "file": "scripts/python/20_rebuild_GDRI_pooled_v2.py",
+      "description": "GDRI and diagnostic-state area statistics",
+      "extracted_text_lines": [
+        13467,
+        14101
+      ],
+      "original_extracted_sha256": "7f69b0ec3ff961ea4e6444a54f8df56eef74f8bdeb7a6879613b6bb213f12beb",
+      "packaged_sha256": "6aef2574ce1b1196df3ff16cf45cf67eaa60db01e11433f73f7d1709d5f456de",
+      "changes": [
+        "Replaced a fixed Windows WORK_DIR with repository-relative data/work or MP_WORK_DIR."
+      ]
+    },
+    {
+      "file": "scripts/python/21a_build_xgboost_dataset.py",
+      "description": "Join environmental and human-pressure tables",
+      "extracted_text_lines": [
+        14103,
+        14430
+      ],
+      "original_extracted_sha256": "acb9db3644674b1df806d6bec61d4063a721082183a12325b8f36cee118ee477",
+      "packaged_sha256": "45b75aa7c395e666bbb1524c281e6735a7e1c140847ecddedba89cc3ede188eb",
+      "changes": [
+        "Replaced a fixed Windows WORK_DIR with repository-relative data/work or MP_WORK_DIR."
+      ]
+    },
+    {
+      "file": "scripts/python/21b_xgboost_shap.py",
+      "description": "Spatial XGBoost evaluation and final-model SHAP",
+      "extracted_text_lines": [
+        14431,
+        16372
+      ],
+      "original_extracted_sha256": "756491e78b460b0348d70094c2331935f80343326fccde449eb459c723a02e4f",
+      "packaged_sha256": "38553ab3d17e4eae7dac431fbcbf2e22ed4024e90b3e2b2e12fbee2f999d41a1",
+      "changes": [
+        "Disabled the optional GUI picker by default and resolved its input below data/work."
+      ]
+    },
+    {
+      "file": "scripts/python/22_select_illustrative_grids.py",
+      "description": "Select illustrative cells using full-model OOF results",
+      "extracted_text_lines": [
+        16374,
+        18484
+      ],
+      "original_extracted_sha256": "c429b379b5c5195471967070c3e440a1ae4061ff544815cd716e36a364d5a8ce",
+      "packaged_sha256": "5e05fbb7100ab3235880e782406839fded3cc1b47135baced4c80f87c5c023a4",
+      "changes": [
+        "Disabled the optional GUI picker by default; retained full_driver OOF selection as in the supplied source."
+      ]
+    }
+  ]
+}
